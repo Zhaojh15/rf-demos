@@ -4,7 +4,7 @@ Library           Selenium2Library
 *** Keywords ***
 打开浏览器
     [Arguments]    ${url}
-    Open Browser    ${url}    ie
+    Open Browser    ${url}    ff
 
 输入用户名
     [Arguments]    ${username}
