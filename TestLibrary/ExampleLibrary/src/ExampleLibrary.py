@@ -17,7 +17,7 @@ class ExampleLibrary:
             
            __ http://qitaos.github.io
         """
-        print 'Library arg %s' % arg
+        print('Library arg %s' % arg)
         pass
     
     def gen_nums(self, counts):
@@ -28,7 +28,7 @@ class ExampleLibrary:
             """
         s = self._gen_nums(counts)
         
-        print '*INFO* Get random number string: %s' % s
+        print('*INFO* Get random number string: %s' % s)
         return s
     
     def _gen_nums(self, counts):
@@ -40,13 +40,13 @@ class ExampleLibrary:
         return s
 
     def arg_demo(self, arg1, arg2= 2, *args):
-        print 'arg1 %s arg2 %s' % (arg1,arg2)
+        print('arg1 %s arg2 %s' % (arg1,arg2))
         for arg in args:
             sys.__stdout__.write('Got arg %s\n' % arg)
 
     def freearg_demo(self, **freearg):
         for name, value in freearg.items():
-            print name, value
+            print(name, value)
 
 class OtherLibrary:
 

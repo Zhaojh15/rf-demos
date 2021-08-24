@@ -4,9 +4,9 @@ Library           Selenium2Library
 
 *** Test Cases ***
 切换浏览器
-    Open Browser    http://localhost:8000/    ie    local
+    Open Browser    http://localhost:8000/    ff    local
     ${title1}    Get Title
-    Open Browser    http://www.baidu.com    ie    baidu
+    Open Browser    http://www.baidu.com    ff    baidu
     ${title2}    Get Title
     Switch Browser    local
     ${title1}    Get Title
@@ -15,7 +15,7 @@ Library           Selenium2Library
     Close All Browsers
 
 选择窗口
-    Open Browser    http://localhost:8000/    ie
+    Open Browser    http://localhost:8000/    ff
     Click Button    id=pay
     Confirm Action
     Select Window    付款
@@ -23,7 +23,7 @@ Library           Selenium2Library
     Close Browser
 
 选择frame
-    Open Browser    http://localhost:8000/    ie
+    Open Browser    http://localhost:8000/    ff
     Select Frame    id=fra
     ${list}    Get List Items    id=buy
     Unselect Frame

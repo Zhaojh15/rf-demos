@@ -4,7 +4,7 @@ Library           Selenium2Library
 
 *** Test Cases ***
 文本框操作
-    Open Browser    http://localhost:8000/    ie
+    Open Browser    http://localhost:8000/    ff
     Input Text    id=ProductName    新产品
     ${value}    Get Value    ProductName
     Assign Id To Element    name=Quantity    Quan
@@ -13,7 +13,7 @@ Library           Selenium2Library
     Close Browser
 
 按钮操作
-    Open Browser    http://localhost:8000/    ie
+    Open Browser    http://localhost:8000/    ff
     Input Text    id=ProductName    新产品
     Input Text    id=Quantity    111
     Click Button    id=submitBtn
@@ -21,7 +21,7 @@ Library           Selenium2Library
     Close Browser
 
 获取页面元素值
-    Open Browser    http://localhost:8000/    ie
+    Open Browser    http://localhost:8000/    ff
     Input Text    id=ProductName    新产品
     ${value}    Get Value    ProductName
     Input Text    id=Quantity    222
@@ -32,8 +32,8 @@ Library           Selenium2Library
     Close Browser
 
 下拉列表
-    Open Browser    http://localhost:8000/    ie
-    Select From List    selectdemo    第三个元素
+    Open Browser    http://localhost:8000/    ff
+    Select From List By Index    selectdemo    第三个元素
     ${label}    Get Selected List Label    selectdemo
     Select From List By Index    selectdemo    0
     ${value}    Get Selected List Value    selectdemo
@@ -42,7 +42,7 @@ Library           Selenium2Library
     Close Browser
 
 其他元素操作
-    Open Browser    http://localhost:8000/    ie
+    Open Browser    http://localhost:8000/    ff
     Click Element    CheckYes
     Select Checkbox    CheckNo
     Unselect Checkbox    CheckYes
@@ -57,7 +57,7 @@ Library           Selenium2Library
     Close Browser
 
 表格操作
-    Open Browser    http://localhost:8000/    ie
+    Open Browser    http://localhost:8000/    ff
     ${cell}    Get Table Cell    buy    1    1
     ${cell}    Get Table Cell    buy    1    2
     Table Cell Should Contain    buy    1    1    产品

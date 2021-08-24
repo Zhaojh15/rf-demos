@@ -4,7 +4,7 @@ Library           Selenium2Library
 
 *** Test Cases ***
 cookie操作
-    Open Browser    http://localhost:8000/    ie
+    Open Browser    http://localhost:8000/    ff
     ${co}    Get Cookies
     Add Cookie    test    qitao
     Add Cookie    robot    framework
@@ -13,7 +13,7 @@ cookie操作
     Close Browser
 
 javascript操作
-    Open Browser    http://localhost:8000/    ie
+    Open Browser    http://localhost:8000/    ff
     Execute Javascript    document.getElementById("infoBtn").disabled=false
     Execute Javascript    $("#ProductName").val("jquery")
     Execute Javascript    $("#Quantity").val("123")
@@ -24,14 +24,14 @@ javascript操作
     Close Browser
 
 截图
-    Open Browser    http://localhost:8000/    ie
+    Open Browser    http://localhost:8000/    ff
     Capture Page Screenshot
     Select Frame    id=fra
     Capture Page Screenshot    iframe.png
     Close Browser
 
 waiting
-    Open Browser    http://localhost:8000/    ie
+    Open Browser    http://localhost:8000/    ff
     Execute Javascript    document.getElementById("infoBtn").disabled=false
     Execute Javascript    $("#ProductName").val("jquery")
     Execute Javascript    $("#Quantity").val("123")
