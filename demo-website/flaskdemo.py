@@ -170,7 +170,7 @@ def webapi():
 
 @app.route('/getrequesttest/', methods=['GET'])
 def getrequesttest():
-    print request.args
+    print(request.args)
     flag = request.args.get('flag')
     args1 = request.args.to_dict()
     args2 = request.args.to_dict()
@@ -186,7 +186,7 @@ def getrequesttest():
         ret_data = [args1, args2, args3]
     else:
         ret_data = {'x':[args1,args2],'y':[args1,args3]}
-    print ret_data
+    print(ret_data)
     return jsonify(ret_data)
 
 @app.route('/postrequesttest', methods = ['POST','GET'])
@@ -205,7 +205,7 @@ def postrequesttest():
 
 @app.route('/putrequesttest/', methods=['GET','PUT'])
 def putrequesttest():
-    print request.args
+    print(request.args)
     flag = request.args.get('flag')
     args1 = request.args.to_dict()
     args2 = request.args.to_dict()
@@ -221,12 +221,12 @@ def putrequesttest():
         ret_data = [args1, args2, args3]
     else:
         ret_data = {'x':[args1,args2],'y':[args1,args3]}
-    print ret_data
+    print(ret_data)
     return jsonify(ret_data)
 
 @app.route('/deleterequesttest/', methods=['GET','DELETE'])
 def deleterequesttest():
-    print request.args
+    print(request.args)
     flag = request.args.get('flag')
     args1 = request.args.to_dict()
     args2 = request.args.to_dict()
@@ -242,7 +242,7 @@ def deleterequesttest():
         ret_data = [args1, args2, args3]
     else:
         ret_data = {'x':[args1,args2],'y':[args1,args3]}
-    print ret_data
+    print(ret_data)
     return jsonify(ret_data)
 
 
